@@ -1,0 +1,199 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border: none;
+
+}
+.mainCointainer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+header{
+	text-align: center;color: beige;
+	background-color: rgb(223, 172, 106);
+	font-size: 40px;
+}
+header h1{
+	text-shadow: 1px 1px 2px rgba(1, 1, 1, 0.471), 0 0 1em rgba(1, 1, 1, 0.471), 0 0 0.2em rgba(1, 1, 1, 0.471);
+}
+
+/* Kod z nieba */
+
+.scoreboard {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	width: 500px;
+	/* font-family: 'Quicksand', sans-serif; */
+}
+
+.scoreboardName,
+.scoreboardScore {
+	padding: 10px;
+	text-align: center;
+	background-color: #3C3C3C;;
+	
+}
+
+.scoreboardName {
+	font-weight: bold;
+	font-size: 28px;
+	border-bottom: 1px solid #ddd;
+	letter-spacing: 1px;
+}
+
+.scoreboardNameOne {
+	color: #009578;
+}
+
+.scoreboardNameTwo {
+	color: #ab8cf5;
+}
+.scoreboardNameThree {
+	color: red;
+}
+
+.scoreboardScore {
+	font-size: 2em;
+	color: #e3d6d6;
+}
+
+.scoreboardControls {
+	display: flex;
+}
+
+.scoreboardControlButton {
+	flex-grow: 1;
+	border: none;
+	background: #eee;
+	cursor: pointer;
+	font-size: 1.4em;
+	
+    background-color: rgb(138, 126, 126);
+
+}
+
+.scoreboardControlButton:hover {
+	background: #ddd;
+}
+
+.scoreboardControlButton:active {
+	background: #ccc;
+}
+
+/* BTN currently disabled */
+.showLegends{
+	background-color: rgba(165, 165, 15, 0.599);
+	padding: 10px 10px;
+	border-radius: 5px;
+	color: rgb(70, 43, 43);
+	border: 1px solid ;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.showLegends:hover{
+	background-color: rgba(241, 241, 27, 0.599);
+
+}
+/* steez of legends */
+.legends{
+	display: none;
+}
+.active{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.legendsList{
+	display: flex;
+	flex-direction: column;
+
+}
+.legendsList li{
+line-height: 30px;
+padding: 2px 58px;
+background-color: rgba(75, 65, 65, 0.456);
+color: rgb(253, 237, 237);
+}
+
+.legendsList li:nth-child(1){
+	font-size: 30px;
+}
+.legendsList li:nth-child(2){
+	font-size: 25px;
+	text-align: center;
+}
+.legendsList li:nth-child(3){
+	font-size: 20px;
+	text-align: center;
+}
+
+
+div[class*=box] {
+  height: 43.33%;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-2 { background-color: #3C3C3C; }
+
+.btn {
+  line-height: 70px;
+  height: 70px;
+  text-align: center;
+  width: 350px;
+  cursor: pointer;
+}
+
+.btn-two {
+	color: rgb(207, 202, 57);
+	transition: all 0.5s;
+	position: relative; 
+  }
+  .btn-two span {
+	z-index: 2; 
+	display: block;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	font-size: 28px; 
+  }
+  .btn-two::before {
+	content: '';
+	position: absolute;
+	top:20;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.5s;
+	/* border: 1px solid rgba(255,255,255,0.2); */
+	background-color: rgba(255,255,255,0.1);
+  }
+  .btn-two::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.5s;
+	/* border: 1px solid rgba(255,255,255,0.2); */
+	background-color: rgba(255,255,255,0.1);
+  }
+  .btn-two:hover::before {
+	transform: rotate(-45deg);
+	background-color: rgba(255,255,255,0);
+  }
+  .btn-two:hover::after {
+	transform: rotate(45deg);
+	background-color: rgba(255,255,255,0);
+  }
